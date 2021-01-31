@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	
+</head>
+<body>
+	<header> 
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 logo">
+					<a href="index.html">
+						<img src="images/logo.png" alt="" />	
+					</a>
+					</div>
+					<div class="col-md-6 navigation">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About Us</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 social">
+						<ul>
+							<a href="https://www.facebook.com/">
+								<li><img src="images/facebook.png" alt="" /></li>
+							</a>
+							<a href="https://twitter.com/?lang=en">
+								<li><img src="images/twitter.png" alt="" /></li>
+							</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<section>
+		<div class="slideshow-container">
+
+			<div class="mySlides fade">
+			  <img src="images/start.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+			  <img src="images/start1.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+			  <img src="images/start2.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+			  <img src="images/start3.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+			  <img src="images/start4.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+			  <img src="images/start5.jpg" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+			  <img src="images/start6.jpg" style="width:100%">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
+		<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			  dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+	</section>
+	
+	<section>
+		<div class="info">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="title">
+							<img src="images/shop.png" alt="" />
+							<h2>Where To Buy Sneakers</h2>
+							<a href="wtb.html" class="btn btn-info">READ MORE</a>
+						</div>
+					</div>
+					
+					<div class="col-md-3">
+						<div class="title">
+							<img src="images/ok.png" alt="" />
+							<h2>Legit Check a Pair</h2>
+							<a href="htlc.html" class="btn btn-info">READ MORE</a>
+						</div>
+					</div>
+					
+					<div class="col-md-3">
+						<div class="title">
+							<img src="images/papuci.png" alt="" />
+							<h2>Latest Sneaker Releases</h2>
+							<a href="lastsnkr.html" class="btn btn-info">READ MORE</a>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="title">
+							<img src="images/stockx.jpg" alt="" />
+							<h2>StockX current prices</h2>
+							<a href="https://stockx.com/sneakers" class="btn btn-info">GO!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	
+	<footer>
+		<div class="tail">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<p>Bucharest, Romania </p>
+					</div>
+					<div class="col-md-6 text-right">
+						<p>Copyright SNKRHLP Est. 2019</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
